@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace BasicFlowers
 {public class TDDCalc
@@ -11,18 +12,22 @@ namespace BasicFlowers
 
             string[] values = inputFromUser.Split(',');
 
-            foreach(var element in values)
+            //char[] delims = new[] { '\r', '\n', ',' };
+            //string[] values = inputFromUser.Split(delims);
+
+
+            //string[] values = Regex.Split(inputFromUser, "[,\r\n]");
+            foreach (var element in values)
             {
                 int.TryParse(element, out var outputValue);
                 //var outputValue = Int32.Parse(element);
                 whatWeReturn += outputValue;
             }
 
-            
+    
 
 
-
-            //try letter,number,letter
+         
 
             return whatWeReturn;
         }
