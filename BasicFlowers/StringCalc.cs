@@ -4,11 +4,18 @@ using System.Text;
 using System.Text.RegularExpressions;
 
 namespace BasicFlowers
-{public class TDDCalc
+{
+    public class TDDCalc
     {
         public int StringCalculator(string inputFromUser)
         {
             var whatWeReturn = 0;
+
+            if (Step5(inputFromUser))
+            {
+                inputFromUser.Replace("-n", ",");
+                Console.WriteLine(inputFromUser);
+            }
 
             string[] values = inputFromUser.Split(',');
 
@@ -24,12 +31,21 @@ namespace BasicFlowers
                 whatWeReturn += outputValue;
             }
 
-    
 
 
-         
 
             return whatWeReturn;
+        }
+
+        public static bool Step5(string SlashN)
+        {
+
+            if (SlashN.IndexOf("-n") >= 0)
+            {
+                //SlashN.Replace("\n", ",");
+                return true;
+            }
+            else { return false; }
         }
     }
 }

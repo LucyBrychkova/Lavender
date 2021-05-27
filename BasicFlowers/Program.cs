@@ -12,13 +12,6 @@ namespace BasicFlowers
             Console.WriteLine(class1.StringCalculator(inputString));
         }
 
-        static void Step5()
-        {
-            Main()
-                TDDcalc
-            if (values.IndexOf("\r") == 1)
-            {
-                values.Replace("\r", ",")
-            }
+        
     }
 }
